@@ -23,11 +23,14 @@ import javax.swing.table.DefaultTableModel;
  */
 public class FrmCategoria extends javax.swing.JFrame {
 
+    /**
+     * Este método lista as categorias salvas no banco de dados
+     */
     private void carregarTabela(){
         try{
             Connection con = Conexao.getConexao();
             List<Categoria> categorias = CategoriaDAO.listar();
-            String[] colunas = {"Id", "Nome", "Descrição"};
+            String[] colunas = {"Id", "Categoria", "Descrição"};
             Object[][] registros = { , };
             tabela.removeAll();
             tabela.setModel(new DefaultTableModel(registros, colunas){});
