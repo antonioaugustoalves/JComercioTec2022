@@ -40,6 +40,8 @@ public class FrmCategoria extends javax.swing.JFrame {
                 });
             }
             
+            System.out.println("Carregando os dados da tabela na tela.");
+            
         }catch(SQLException ex){
             JOptionPane.showMessageDialog(null, 
                     "Erro ao carregar a tabela.\n"
@@ -77,6 +79,7 @@ public class FrmCategoria extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("Código da categoria:");
 
         btnPesquisar.setText("Pesquisar");
@@ -86,8 +89,11 @@ public class FrmCategoria extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(153, 0, 0));
         jLabel2.setText("Nome da categoria:");
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("Descrição:");
 
         tabela.setModel(new javax.swing.table.DefaultTableModel(
@@ -166,9 +172,9 @@ public class FrmCategoria extends javax.swing.JFrame {
                                     .addComponent(btnPesquisar))
                                 .addGroup(layout.createSequentialGroup()
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(18, 18, 18)
+                                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(txtNome)
                                         .addComponent(txtDescricao)))))
